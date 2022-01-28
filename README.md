@@ -1,4 +1,5 @@
 # Scientific Calculator
+## In this project we use HTML, CSS, JavaScript.
  ### Function of Calculator:
 |Operation|Mathematical Function|
 |----|-----|
