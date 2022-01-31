@@ -27,5 +27,10 @@ button{
 
 #operation{
     height: 45px;
+<<<<<<< HEAD
+=======
+    overflow-x: auto;
+    overflow-y: hidden;
+>>>>>>> Version-1
 }
 
