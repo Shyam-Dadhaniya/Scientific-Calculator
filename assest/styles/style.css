@@ -27,5 +27,7 @@ button{
 
 #operation{
     height: 45px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assest/styles/all.css">
     <link rel="stylesheet" href="./assest/styles/bootstrap.css">
     <link rel="stylesheet" href="./assest/styles/style.css">
+    <link rel="shortcut icon" href="./assest/img/calculator.png" type="image/x-icon">
     <title>Scientific Calculator</title>
 </head>
 
@@ -24,11 +25,11 @@
         </div>
         <div class="row">
             <div class="col d-flex">
-                <button id="mc-on" class="btn gray" data-toggle="tooltip" title="Memory Clear" onclick="mClear()">MC</button>
-                <button id="mr-on" class="btn gray" data-toggle="tooltip" title="Memory ReCall" onclick="mRecall()">MR</button>
-                <button class="btn fw-500" data-toggle="tooltip" title="Memory Plus" onclick="mPlus()">M+</button>
-                <button class="btn fw-500" data-toggle="tooltip" title="Memory Minus" onclick="mMinus()">M-</button>
-                <button class="btn fw-500" data-toggle="tooltip" title="Memory Store" onclick="memoryStore()">MS</button>
+                <button id="mc-on" class="btn gray" onclick="memoryClear()">MC</button>
+                <button id="mr-on" class="btn gray" onclick="memoryRecall()">MR</button>
+                <button class="btn fw-500" onclick="memoryPlus()">M+</button>
+                <button class="btn fw-500" onclick="memoryMinus()">M-</button>
+                <button class="btn fw-500" onclick="memoryStore()">MS</button>
             </div>
         </div>
         <div class="row">
@@ -49,10 +50,10 @@
                         <span>&#402;</span> Function
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <div class="dropdown-item" data-value = "ceil" onclick="mathsFun('ceil')">Ceil</div>
-                      <div class="dropdown-item" data-value = "floor" onclick="mathsFun('floor')">Floor</div>
-                      <div class="dropdown-item" data-value = "round" onclick="mathsFun('round')">Round</div>
-                      <div class="dropdown-item" data-value = "trunc" onclick="mathsFun('trunc')">Trunc</div>
+                      <div class="dropdown-item" data-value = "ceil" onclick="mathsFunction('ceil')">Ceil</div>
+                      <div class="dropdown-item" data-value = "floor" onclick="mathsFunction('floor')">Floor</div>
+                      <div class="dropdown-item" data-value = "round" onclick="mathsFunction('round')">Round</div>
+                      <div class="dropdown-item" data-value = "trunc" onclick="mathsFunction('trunc')">Trunc</div>
                     </div>
                   </div>
             </div>
@@ -74,7 +75,7 @@
                 <button class="btn" data-value = "^2" onclick="square()">x <sup>2</sup></button>
                 <button class="btn" data-value = "1/" onclick="addNum(this)">1/x</button>
                 <button class="btn" onclick="absolute()">|x|</button>
-                <button class="btn" onclick="cal_exp()">exp</button>
+                <button class="btn" onclick="calExp()">exp</button>
                 <button class="btn" data-value = "%" onclick="addNum(this)">mod</button>
             </div>
         </div>
