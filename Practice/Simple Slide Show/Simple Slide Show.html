@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Show</title>
+    <style>
+        img {
+            height: 300px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./image/image1.jpg" alt="slideshow" id="myImage">
+    </div>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+
+    <script>
+        let myImages = ['image/image1.jpg', 'image/image2.jpg', 'image/image3.jpg', 'image/image4.jpg', 'image/image5.jpg',];
+        let currentImg = 0;
+
+        document.getElementById('next').onclick = nextImg;
+        document.getElementById('previous').onclick = previousImg;
+
+        function nextImg() {
+            currentImg++;
+            if (currentImg > myImages.length - 1) {
+                currentImg = 0;
+            }
+            document.getElementById('myImage').src = myImages[currentImg];
+        }
+
+        function previousImg() {
+            currentImg--;
+            if (currentImg < 0) {
+                currentImg = myImages.length-1;
+            }
+            document.getElementById('myImage').src = myImages[currentImg];
+        }
+
+    </script>
+</body>
+
+</html>

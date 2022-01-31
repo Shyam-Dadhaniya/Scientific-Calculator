@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protype In JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Prototype</h1>
+    <img src="./img/Prototype.png" alt="prototype" width="1200px" height="600px">
+    <script>
+        let mobile = function (model_no) {
+            //Instance Member
+            this.model = model_no;
+            this.price = 30000;
+        }
+
+        let samsung = new mobile ('Samsung A71');
+        let onePlus = new mobile ('OnePlus 9');
+        //samsung.color = 'White';
+        //onePlus.color = 'Mate Blacks';
+
+        //classname.prototype.key = 'value'
+        //Prototype Member
+        mobile.prototype.color = 'white';
+        console.log(samsung);
+        console.log(onePlus);
+
+
+        function phone() {
+            this.a = 20;
+        }
+        phone.prototype.a = 10;
+
+        let model = new phone;
+        console.log(model.a);
+    </script>
+</body>
+</html>

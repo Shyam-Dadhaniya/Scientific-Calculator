@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        //----------------------------------------
+
+        let sum1 = function sum (a, b){
+            console.log(a + b);
+        }
+        sum1(10, 6);
+
+        //-----------------------------------------
+
+        let sum2 = (a,b) => {
+            return console.log(a + b);
+        }
+        sum2(16, 10)
+
+        //-------------------------------------------
+
+        let obj1 = {
+            greeting: "Good Morning",
+            name : ['Shyam', 'Dadhaniya', 'India', 'Gujarat'],
+            speak(){
+                this.name.forEach((student)=>{
+                    console.log(this.greeting + ' Mr.' + student);
+                })
+            }
+        }
+        obj1.speak()
+
+        //------------------------------------------------
+        let obj2 = {
+            greeting: "Good Morning",
+            name : ['Shyam', 'Dadhaniya', 'India', 'Gujarat'],
+            speak(){
+                this.name.forEach(function (student){
+                    console.log(this.greeting + ' Mr.' + student);
+                })
+            }
+        }
+        obj2.speak()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="special">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Remove this paragraph.</p>
+    </div>
+
+    <script>
+        let myC = document.querySelector('p');
+        myC.className = "blue";
+        //------------------------------------------------------
+        let myTag = document.createElement('p');
+        let myText = document.createTextNode("This paragraph is created by create element");
+        myTag.appendChild(myText);
+        let myDiv = document.querySelector('div');
+        myDiv.appendChild(myTag);
+        //------------------------------------------------------
+
+        let myDiv1 = document.querySelector('div');
+        myDiv1.removeChild(myDiv1.children[2]);
+
+
+    </script>
+</body>
+</html>

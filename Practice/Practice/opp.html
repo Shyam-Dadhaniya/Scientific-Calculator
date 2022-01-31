@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OPP In JavaScript</title>
+</head>
+<body>
+    <h1>OPPS in JavaScript</h1>
+
+    <script>
+        /*class hello{
+            msg(){
+                console.log("Hello Everyone.")
+            }
+            sorry(){
+                console.log("Sorry everyone.")
+            }
+        }
+
+        let a = new hello();
+
+        a.msg();
+        a.sorry();
+
+        */
+        //-------------------------------------------------------------
+
+        class student{
+           constructor(name,age){
+               this.name = name;
+               this.age = age
+               console.log("This result is from constructor.");
+           }
+           hello(){
+               document.write(`Hello ${this.name} `);
+               document.write(`And your age is ${this.age}.`);
+
+           }
+        }
+
+        let a = new student('Shyam Dadhaniya', 21);
+        a.hello()
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance In JavaScript</title>
+</head>
+<body>
+    <h1>Inheritance In JavaScript</h1>
+
+    <script>
+        class father{
+            showFmoney(){
+                return "Father Money";
+            }
+        }
+
+        class son extends father{
+            showSmoney(){
+                return 'Son Money';
+            }
+        }
+
+        class grandSon extends son{
+            showGmoney(){
+                return 'Grandson Money';
+            }
+        }
+
+        /*let f = new father();
+        console.log(g.showFmoney());
+        console.log(g.showSmoney());
+        console.log(g.showGmoney());*/
+
+        /*let s = new son();
+        console.log(s.showFmoney());
+        console.log(s.showSmoney());
+        console.log(s.showGmoney());*/
+
+        let g = new grandSon();
+        console.log(g.showFmoney());
+        console.log(g.showSmoney());
+        console.log(g.showGmoney());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting In JavaScript</title>
+</head>
+<body>
+    <h1>Hoisting in JavaScript</h1>
+
+    <script>
+
+        getName();
+        console.log(x);
+        console.log(getName);
+
+        var x = 10;
+
+        function getName() {
+            console.log("This is from getName function.")
+        }
+
+        getName();
+        console.log(x);
+        console.log(getName)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+#content{
+
+    margin: 100px auto 20px auto;
+    border: 12px solid black;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
+
+#content img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn{
+ text-align: center;
+}
+
+#previous {
+    padding: 10px;
+    font-size: xx-large;
+}
+
+#next {
+    padding: 10px;
+    font-size: xx-large;
+}
+
+.fadeinimg{
+    animation: fadein 2s;
+}
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
