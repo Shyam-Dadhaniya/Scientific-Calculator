@@ -56,7 +56,7 @@ function clearData() {
  * @description By using below function we will get the final result of the operation.
  */
 function cal() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = numberFormate(eval(value).toString());
 }
 //-------------------------------------------Equal End--------------------------------------------------
@@ -68,9 +68,9 @@ function cal() {
  * @description By using this function we can erase last digit or method of opration.
  */
 function backspace() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     let valuelength = value.length;
-    let newValue = value.substring(0, valuelength - 1);
+    const newValue = value.substring(0, valuelength - 1);
     operation.innerText = numberFormate(newValue);
 }
 //-------------------------------------------Backspace End----------------------------------------------
@@ -95,7 +95,7 @@ function plusminus() {
  * @description Here ln stands for log Natural and this function help as to find the log of any digits.
  */
 function ln() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.log(value).toString()
 }
 //-------------------------------------------ln End---------------------------------------------------
@@ -107,7 +107,7 @@ function ln() {
  * @description Log generally refers to a logarithm to the base 10 this function help us to found log with base.
  */
 function log() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.log10(value).toString();
 }
 //-------------------------------------------Log End----------------------------------------------------
@@ -119,7 +119,7 @@ function log() {
  * @description 10^x : It's means power of ten and this function is help us to calculate the power of 10 and here x means whatever power we want.
  */
 function tenPower() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.pow(10, value).toString();
 }
 //-------------------------------------------Power of Ten End-------------------------------------------
@@ -131,7 +131,7 @@ function tenPower() {
  * @description It's help to find the square root of any value.
  */
 function root() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.sqrt(value).toString();
 }
 //-------------------------------------------Root End---------------------------------------------------
@@ -145,7 +145,7 @@ function root() {
 function factorial() {
     let value = getCurrentValue();
     let result = 1;
-    let i = 0;
+    const i = 0;
     for (let i = value; i >= 1; i--) {
         result *= i;
     }
@@ -175,7 +175,7 @@ function square() {
  * @description This function is use to returns e^x value 
  */
 function calExp() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.exp(value);
 }
 //-------------------------------------------Exp End----------------------------------------------------
@@ -187,7 +187,7 @@ function calExp() {
  * @description This function is use the make any value absolute.
  */
 function absolute() {
-    let value = getCurrentValue();
+    const value = getCurrentValue();
     operation.innerText = Math.abs(value);
 }
 //-------------------------------------------Absolute End-----------------------------------------------
@@ -243,7 +243,7 @@ function trigonometry(method) {
             result = 1 / Math.tan(value);
             break;
     }
-    if (result === NaN) {
+    if (isNaN(result)) {
         operation.innerText = "ERROR"
     } else {
         operation.innerText = numberFormate(result.toString());
@@ -271,7 +271,7 @@ function deg() {
  * @description This function is use to fixed value with exponent value.
  */
 function exp() {
-    let value = Number(operation.innerText.replace(/,/g, ""));
+    const value = Number(operation.innerText.replace(/,/g, ""));
     operation.innerText = numberFormate(value.toExponential(3).toString());
 }
 //-------------------------------------------Exponential End--------------------------------------------
@@ -285,7 +285,7 @@ let mValue = 0;
  * @description The calculator has one memory that can be used for storing values temporarily.
  */
 function memoryStore() {
-    let value = Number(operation.innerText.replace(/,/g, ""));
+    const value = Number(operation.innerText.replace(/,/g, ""));
     if (operation.innerText != "") {
         mValue = value;
         document.getElementById("mc-on").style.color = "black";
@@ -299,7 +299,7 @@ function memoryStore() {
  * @description This function use to add the presently displayed number to the value in memory.
  */
 function memoryPlus() {
-    let value = Number(operation.innerText.replace(/,/g, ""));
+    const value = Number(operation.innerText.replace(/,/g, ""));
     if (operation.innerText != "") {
         mValue += value;
         document.getElementById("mc-on").style.color = "black";
@@ -313,7 +313,7 @@ function memoryPlus() {
  * @description This function use to subtract the present value from the stored value.
  */
 function memoryMinus() {
-    let value = Number(operation.innerText.replace(/,/g, ""));
+    const value = Number(operation.innerText.replace(/,/g, ""));
     if (operation.innerText != "") {
         mValue -= value;
         document.getElementById("mc-on").style.color = "black";
