@@ -26,7 +26,7 @@ function numberFormate(input) {
 
 //-------------------------------------------All Normal Function Start----------------------------------
 
-
+/**
  * @function addNum
  * @description This function get the number when we click on button.
  * @param {*} e 
